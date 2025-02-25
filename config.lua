@@ -520,11 +520,13 @@ Config.Alerts = {
     ['lettuce_name'] = 'Lettuce', 
     ['lettuce_fields'] = 'Lettuce Farm',
     ['lettuce_name'] = 'Lettuce',      
-    ['BowlofLettuce'] = 'Bowl of Lettuce',     
+    ['BowlofLettuce'] = 'Bowl of Lettuce',   
+    ['BowlofSalad'] = 'Bowl of Salad',     
     ['picking_lettuce'] = 'Picking Up Lettuce',
     ['lettuce_processingbar'] = 'Slicing Lettuces',
     ['lettuce_processing'] = 'Sliced ' ..Config.LettuceProcessing,
-    ['lettuce_trader'] = 'Made ' ..Config.LettuceBowl.. ' bowl of lettuce',
+    ['lettuce_trader'] = 'Made ' ..Config.LettuceBowl.. ' bowls of lettuce',
+    ['salad_trader'] = 'Made ' ..Config.SalardBowl.. ' bowls of salad',
     ['error_lettuceslicing'] = 'You don\'t have any lettuce heads to slice',
 
 
