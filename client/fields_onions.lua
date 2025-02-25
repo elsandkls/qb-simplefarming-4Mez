@@ -148,7 +148,7 @@ RegisterNetEvent('qb-simplefarming:pickeledonions', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:onioncheck', function(onion)
     if onion then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('onion_processing', Config.Alerts['onion_processingbar'], Config.ProcessingTime['onion_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('onion_processing', Config.Alerts['onion_processingbar'], Config.ProcessingTime['onion_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

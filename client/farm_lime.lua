@@ -105,7 +105,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:limes', function(limes)
       if limes then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('lime_processing', Config.Alerts['lime_progressbar'], Config.ProcessingTime['lime_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('lime_processing', Config.Alerts['lime_processingbar'], Config.ProcessingTime['lime_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

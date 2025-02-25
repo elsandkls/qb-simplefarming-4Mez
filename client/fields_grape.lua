@@ -381,7 +381,7 @@ RegisterNetEvent('qb-simplefarming:makinggrapejuice', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:grapecheck', function(grapes)
     if grapes then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['grape_progressbar'], Config.ProcessingTime['grape_processingtime'] , false, true, {
+      QBCore.Functions.Progressbar('grape_processing', Config.Alerts['grape_processingbar'], Config.ProcessingTime['grape_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

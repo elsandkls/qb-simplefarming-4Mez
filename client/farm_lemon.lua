@@ -102,7 +102,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:lemons', function(lemons)
       if lemons then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('lemon_processing', Config.Alerts['lemon_progressbar'], Config.ProcessingTime['lemon_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('lemon_processing', Config.Alerts['lemon_processingbar'], Config.ProcessingTime['lemon_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

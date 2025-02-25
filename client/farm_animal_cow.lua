@@ -398,7 +398,7 @@ end)
     QBCore.Functions.TriggerCallback('qb-simplefarming:milkbucketfull', function(milkbucket)
       if milkbucket then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['cow_dairyprocessorbar'], Config.ProcessingTime['milk_tradingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['cow_dairyprocessorbar'], Config.ProcessingTime['dairy_processing'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

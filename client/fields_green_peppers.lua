@@ -327,7 +327,7 @@ RegisterNetEvent('qb-simplefarming:pickeledgreenpepper', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:greenpeppercheck', function(greenpepper)
     if greenpepper then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('greenpepper_processing', Config.Alerts['greenpepper_processingbar'], Config.ProcessingTime['greenpepper_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('greenpepper_processing', Config.Alerts['greenpepper_processingbar'], Config.ProcessingTime['greenpepper_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

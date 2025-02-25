@@ -103,7 +103,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:peaches', function(peaches)
       if peaches then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('peach_processing', Config.Alerts['peach_progressbar'], Config.ProcessingTime['peach_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('peach_processing', Config.Alerts['peach_processingbar'], Config.ProcessingTime['peach_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

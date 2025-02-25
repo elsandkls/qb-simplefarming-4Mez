@@ -1142,7 +1142,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:apples', function(apples)
       if apples then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('apple_processing', Config.Alerts['apple_progressbar'], Config.ProcessingTime['apple_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('apple_processing', Config.Alerts['apple_processingbar'], Config.ProcessingTime['apple_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

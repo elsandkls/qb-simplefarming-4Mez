@@ -152,7 +152,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
       if cucumber then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_smashingtime'] , false, true, {
+        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_processingtime'] , false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

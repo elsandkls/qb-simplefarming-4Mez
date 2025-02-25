@@ -168,6 +168,7 @@ Config.ProcessingTime = {
     ["apple_processingtime"] = 5000,                    -- MS = Seconds (5000 ms = 5 seconds)
 
     ["beef_processingtime"] = 10000,
+    ["dairy_processingtime"] = 10000,
     ["milk_tradingtime"] = 7500,
 
     ["bacon_processingtime"] = 10000,
@@ -175,7 +176,7 @@ Config.ProcessingTime = {
     ["pork_processingtime"] = 10000,
     ["sausage_processingtime"] = 10000,
      
-    ["pumpkin_smashingtime"] = 7500,
+    ["pumpkin_processingtime"] = 7500,
     ["grape_processingtime"] = 7500,
     ["chillypepper_processingtime"] = 7500,
     ["greenpepper_processingtime"] = 7500,
@@ -385,7 +386,7 @@ Config.Alerts = {
     ['apple_name'] = 'Apple',  
     --- 
     ['apple_pickingbar'] = 'Picking Apples',
-    ['apple_progressbar'] = 'Making Juice',
+    ['apple_processingbar'] = 'Making Juice',
 	['apple_pickingfront'] = 'You picked ',
     ['apple_pickingend'] = ' apples from the tree',
     ['apple_processing'] = 'You are processing ' ..Config.AppleProcessing.. ' amount of apples',
@@ -428,7 +429,7 @@ Config.Alerts = {
     ['corn_name'] = 'Corn', 
     ---  
     ['corn_picking'] = 'Picking Corn',
-    ['corn_progressbar'] = 'Making Can Corn',
+    ['corn_processingbar'] = 'Making Can Corn',
     ['corn_processing'] = 'Removed ' ..Config.CornProcessing.. ' corn',
     ['corn_processed'] = 'Made ' ..Config.CornProcessed.. ' Can\'s of corn',
     ['error_corncob'] = 'Seems like you don\'t have any corn cobs to process... Come Back Later!',
@@ -438,7 +439,7 @@ Config.Alerts = {
     ['grapes_name'] = 'Grapes', 
     --
     ['grape_picking'] = 'Picking Grapes',
-    ['grape_progressbar'] = 'Straining Grapes',
+    ['grape_processingbar'] = 'Straining Grapes',
     ['grape_processing'] = 'Strained ' ..Config.GrapeProcessing.. ' grapes',
     ['grape_processed'] = 'Made ' ..Config.GrapeProcessed.. ' bottles of juice',
     ['error_grape'] = 'Hm, It seems like you don\'t have any grapes to process... Come back later!',
@@ -463,25 +464,25 @@ Config.Alerts = {
 
     ['tomatoes_color'] = 'Red Tomatoes',
     ['tomatoes_picking'] = 'Picking Tomatoes',
-    ['tomatoes_progressbar'] = 'Smashing Tomatoes',
+    ['tomatoes_processingbar'] = 'Smashing Tomatoes',
     ['tomatoes_processing'] = 'Squeezed ' ..Config.TomatoesProcessing.. ' tomatoes',
     ['tomatoes_processed'] = 'Made ' ..Config.TomatoesProcessed.. ' jars of tomatopaste',
     ['error_tomatoes'] = 'Hm, It seems like you don\'t have any tomatoes to process... Come back later!',
 
 -- pigs
-    ['bacon_progressbar'] = 'Cooking Bacon',
+    ['bacon_processingbar'] = 'Cooking Bacon',
     ['bacon_processing'] = 'You cooked ' ..Config.BaconProcessed.. ' pieces of bacon',
     ['error_bacon'] = 'Don\'t have any bacon to cook',
 
-    ['ham_progressbar'] = 'Cooking Ham',
+    ['ham_processingbar'] = 'Cooking Ham',
     ['ham_processing'] = 'You cooked ' ..Config.HamProcessed.. ' slices of ham',
     ['error_ham'] = 'Don\'t have any ham to cook',
 
-    ['pork_progressbar'] = 'Cooking Pork',
+    ['pork_processingbar'] = 'Cooking Pork',
     ['pork_cooking'] = 'You cooked ' ..Config.PorkProcessed.. ' slabs of pork',
     ['error_pork'] = 'Don\'t have any pork to cook',
 
-    ['sausage_progressbar'] = 'Cooking Sausage',
+    ['sausage_processingbar'] = 'Cooking Sausage',
     ['sausage_processing'] = 'You cooked ' ..Config.SausageProcessed.. ' pieces of sausages',
     ['error_sausage'] = 'Don\'t have any sausage to cook',
 

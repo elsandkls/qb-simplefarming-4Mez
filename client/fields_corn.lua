@@ -165,7 +165,7 @@ RegisterNetEvent('qb-simplefarming:makecancorn', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:corncheck', function(corncob)
     if corncob then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['corn_progressbar'], Config.ProcessingTime['pumpkin_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('corn_processing', Config.Alerts['corn_processingbar'], Config.ProcessingTime['corn_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

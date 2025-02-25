@@ -104,7 +104,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:pecans', function(pecans)
       if pecans then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('pecan_processing', Config.Alerts['pecan_progressbar'], Config.ProcessingTime['pecan_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('pecan_processing', Config.Alerts['pecan_processingbar'], Config.ProcessingTime['pecan_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

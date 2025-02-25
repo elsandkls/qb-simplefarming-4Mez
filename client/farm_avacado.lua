@@ -119,7 +119,7 @@ if Config.UseBlips then
     QBCore.Functions.TriggerCallback('qb-simplefarming:avacados', function(avacados)
       if avacados then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-        QBCore.Functions.Progressbar('avacado_processing', Config.Alerts['avacado_progressbar'], Config.ProcessingTime['avacado_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('avacado_processing', Config.Alerts['avacado_processingbar'], Config.ProcessingTime['avacado_processingtime'], false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

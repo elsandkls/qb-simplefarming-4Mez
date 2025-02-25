@@ -301,7 +301,7 @@ RegisterNetEvent('qb-simplefarming:makingchillysauce', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:chillycheck', function(hotstuff)
     if hotstuff then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['chilly_hotsauce'], Config.ProcessingTime['chillypepper_processingtime'] , false, true, {
+      QBCore.Functions.Progressbar('chillypepper_processing', Config.Alerts['chilly_hotsauce'], Config.ProcessingTime['chillypepper_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

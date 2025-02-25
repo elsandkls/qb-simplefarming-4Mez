@@ -750,7 +750,7 @@ RegisterNetEvent('PigPens', function()
     QBCore.Functions.TriggerCallback('qb-simplefarming:rawbacon', function(rawbeef)
       if rawbeef then
         TriggerEvent('animations:client:EmoteCommandStart', {"BBQ"})
-        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['bacon_progressbar'], Config.ProcessingTime['bacon_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['bacon_processingbar'], Config.ProcessingTime['bacon_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -771,7 +771,7 @@ RegisterNetEvent('PigPens', function()
     QBCore.Functions.TriggerCallback('qb-simplefarming:rawham', function(rawbeef)
       if rawbeef then
         TriggerEvent('animations:client:EmoteCommandStart', {"BBQ"})
-        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['ham_progressbar'], Config.ProcessingTime['ham_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['ham_processingbar'], Config.ProcessingTime['ham_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -792,7 +792,7 @@ RegisterNetEvent('PigPens', function()
     QBCore.Functions.TriggerCallback('qb-simplefarming:rawpork', function(rawbeef)
       if rawbeef then
         TriggerEvent('animations:client:EmoteCommandStart', {"BBQ"})
-        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['pork_progressbar'], Config.ProcessingTime['pork_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('beef_processing', Config.Alerts['pork_processingbar'], Config.ProcessingTime['pork_processingtime'] , false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

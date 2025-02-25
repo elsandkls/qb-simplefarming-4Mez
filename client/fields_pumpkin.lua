@@ -167,7 +167,7 @@ RegisterNetEvent('qb-simplefarming:pumpkinpie', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:pumpkincheck', function(pumpkin)
     if pumpkin then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('pumpkin_processing', Config.Alerts['pumpkin_processingbar'], Config.ProcessingTime['pumpkin_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('pumpkin_processing', Config.Alerts['pumpkin_processingbar'], Config.ProcessingTime['pumpkin_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,
