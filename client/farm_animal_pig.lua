@@ -1077,19 +1077,19 @@ RegisterNetEvent('qb-simplefarming:menuofpig', function()
         }
     },
     {
-        header = 'Cook Pork',
+        header = 'Cook PorkChop',
         params = {
             event = 'qb-simplefarming:porkchopprocessing',
         }
     },
     {
-        header = 'Cook Pork',
+        header = 'Cook Pork Tenderloin',
         params = {
             event = 'qb-simplefarming:tenderloinprocessing',
         }
     },
     {
-        header = 'Cook Sausage',
+        header = 'Cook Pork Sausage',
         params = {
             event = 'qb-simplefarming:sausageprocessing',
         }

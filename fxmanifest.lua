@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'TRClassic#0001'
-description 'Farming script for QBCore'
+description 'Farming script for QBCore Modded 4 Mez'
 version '1.1.3'
 
 client_scripts {
@@ -14,9 +14,13 @@ client_scripts {
     'client/*.lua'
 }
 
-server_scripts {'server/*.lua'}
+server_scripts {
+    'server/*.lua'
+}
 
-shared_scripts {'config.lua'}
+shared_scripts {
+    'config.lua'
+}
 
 dependencies {
     'PolyZone',

@@ -357,13 +357,23 @@ Config.Sell = {
 
 }
 
-
+ 
 -- Alert Notification
 Config.Alerts = {
     ['cancel'] = 'Cancelled',
     ['weapon'] = 'You don\'t have a knife to do this',
     ['itemamount'] = 'You are trying to process a amount that is invalid try again!',
+    ['soldit'] = "You have sold your items",
+    ['nosale'] = "You do not have the items to sell here!",
+    ['farm_picked'] = 'Picked Up ',
+    ['farm_grab'] = 'Grabbed ',
 
+-- 2/24/2025
+-- add support for apples
+    -- ❓ apple
+    ['apple_farm'] = 'Apple Farm',
+    ['apple_name'] = 'Apple',  
+    --- 
     ['apple_pickingbar'] = 'Picking Apples',
     ['apple_progressbar'] = 'Making Juice',
 	['apple_pickingfront'] = 'You picked ',
@@ -372,6 +382,8 @@ Config.Alerts = {
     ['apple_trader'] = 'Received ' ..Config.AppleJuice.. ' apple juice from the framer',
     ['error_appleprocessor'] = 'Hm, It seems like you don\'t have any apples to process... Come back later!',
 
+
+    -- cow
     ['cow_milking'] = 'Milking The Cow',
     ['emptybucket'] = 'You don\'t have a empty bucket',
     ['killing_cow'] = 'Slaughtering Cow',
@@ -384,39 +396,65 @@ Config.Alerts = {
     ['error_milkprocessor'] = 'It looks like you don\'t have any buckets of milk..',
     ['error_milklocation'] = 'Go to the Paleto Barn and milk the cows then come back!',
 
+
+-- ❓ pumpkin
+    ['pumpkin_fields'] = 'Pumpkin Farm',
+    ['pumpkin_name'] = 'Pumpkin', 
+    ['sliceofpumpkinpie'] = 'Slice of Pumpkin Pie',        
+    ['pumpkinpie'] = 'Pumpkin Pie', 
+    ---  
     ['picking_pumpkins'] = 'Picking Up Pumpkin',
     ['pumpkin_processingbar'] = 'Smashing Pumpkins',
     ['pumpkin_processing'] = 'Smashed ' ..Config.PumpkinProcessing,
-    ['pumpkin_trader'] = 'Made ' ..Config.PumpkinBoxes.. ' Boxes of pumpkin pie',
+    ['pumpkin_trader'] = 'Made ' ..Config.PumpkinBoxes.. ' boxes of pumpkin pie',
     ['error_pumpkinsmashing'] = 'You don\'t have any pumpkins to smash',
 
+-- ❓ corn
+    ['corn_fields'] = 'Corn Farm',
+    ['corn_name'] = 'Corn', 
+    ---  
     ['corn_picking'] = 'Picking Corn',
     ['corn_progressbar'] = 'Making Can Corn',
     ['corn_processing'] = 'Removed ' ..Config.CornProcessing.. ' corn',
     ['corn_processed'] = 'Made ' ..Config.CornProcessed.. ' Can\'s of corn',
     ['error_corncob'] = 'Seems like you don\'t have any corn cobs to process... Come Back Later!',
 
+-- ❓ grape
+    ['grape_fields'] = 'Grape Farm',
+    ['grapes_name'] = 'Grapes', 
+    --
     ['grape_picking'] = 'Picking Grapes',
     ['grape_progressbar'] = 'Straining Grapes',
     ['grape_processing'] = 'Strained ' ..Config.GrapeProcessing.. ' grapes',
     ['grape_processed'] = 'Made ' ..Config.GrapeProcessed.. ' bottles of juice',
     ['error_grape'] = 'Hm, It seems like you don\'t have any grapes to process... Come back later!',
 
+-- ❓ green pepper
     ['greenpepper_picking'] = "Picking GreenPeppers",
+    ['greenpepper_fields'] = 'GreenPepper Farm',
+    ['greenpepper_name'] = 'GreenPepper',      
+    ['PickledGreenPeppers'] = 'Pickled GreenPeppers',     
+    ['picking_greenpeppers'] = 'Picking Up GreenPepper',
+    ['greenpepper_processingbar'] = 'Slicing GreenPeppers',
+    ['greenpepper_processing'] = 'Sliced ' ..Config.GreenPepperProcessing,
+    ['greenpepper_trader'] = 'Made ' ..Config.GreenPepperJars.. ' Jar of pickled greenpepper',
+    ['error_greenpepperslicing'] = 'You don\'t have any greenpeppers to slice',
 
+-- ❓ chilli pepper
     ['chillypepper_picking'] = 'Picking ChillyPeppers',
     ['chilly_hotsauce'] = 'Making Hot Sauce',
     ['chilly_processing'] = 'Crushed ' ..Config.ChillyProcessing.. ' chilly Peppers',
     ['chilly_processed'] = 'Made ' ..Config.ChillyProcessed.. ' hot sauce bottle\'s',
     ['error_chilly'] = 'Hm, It seems like you don\'t have any chilly peppers to process... Come back later!',
 
+    ['tomatoes_color'] = 'Red Tomatoes',
     ['tomatoes_picking'] = 'Picking Tomatoes',
     ['tomatoes_progressbar'] = 'Smashing Tomatoes',
     ['tomatoes_processing'] = 'Squeezed ' ..Config.TomatoesProcessing.. ' tomatoes',
     ['tomatoes_processed'] = 'Made ' ..Config.TomatoesProcessed.. ' jars of tomatopaste',
     ['error_tomatoes'] = 'Hm, It seems like you don\'t have any tomatoes to process... Come back later!',
 
-
+-- pigs
     ['bacon_progressbar'] = 'Cooking Bacon',
     ['bacon_processing'] = 'You cooked ' ..Config.BaconProcessed.. ' pieces of bacon',
     ['error_bacon'] = 'Don\'t have any bacon to cook',
@@ -444,52 +482,63 @@ Config.Alerts = {
     -- ❓ pecans
     ['pecan_farm'] = 'Pecan Farm',
     ['pecan_name'] = 'Pecan',
+
     -- ❓ lemons
     ['lemon_farm'] = 'Lemon Farm',
     ['lemon_name'] = 'Lemon',
+
     -- ❓ limes
     ['lime_farm'] = 'Lime Farm',
     ['lime_name'] = 'Lime',
+
     -- ❓ peaches
     ['peach_farm'] = 'Peach Farm',
     ['peach_name'] = 'Peach',
+
     -- ❓ avacado
     ['avacado_farm'] = 'Avacado Farm',
     ['avacado_name'] = 'Avacado',  
+      
     
--- 2/24/2025
--- add support for apples
-    -- ❓ apple
-    ['apple_farm'] = 'Apple Farm',
-    ['apple_name'] = 'Apple',   
-
-
--- 2/24/2025
--- adding in fields labels or names
 -- ❓ lettuce  
     ['lettuce_fields'] = 'Lettuce Fields',
     ['lettuce_name'] = 'Lettuce', 
+
+
 -- ❓ onions
     ['onion_fields'] = 'Onion Farm',
     ['onion_name'] = 'Onion', 
+    ['PickledOnions'] = 'Pickled Onions',     
+    ['picking_onions'] = 'Picking Up Onion',
+    ['onion_processingbar'] = 'Slicing Onions',
+    ['onion_processing'] = 'Sliced ' ..Config.OnionProcessing,
+    ['onion_trader'] = 'Made ' ..Config.OnionJars.. ' Jar of pickled onion',
+    ['error_onionslicing'] = 'You don\'t have any onions to slice',
+
 -- ❓ cucumber
     ['cucumber_fields'] = 'Cucumber Farm',
     ['cucumber_name'] = 'Cucumber', 
+
+
 -- ❓ rice
     ['rice_fields'] = 'Rice Farm',
     ['rice_name'] = 'Rice', 
+
+
 -- ❓ barley
     ['barley_fields'] = 'Barley Farm',
     ['barley_name'] = 'Barley', 
+
+
 -- ❓ wheat
     ['wheat_fields'] = 'Wheat Farm',
-    ['wheat_name'] = 'Wheat', 
--- ❓ pumpkin
-    ['pumpkin_fields'] = 'Pumpkin Farm',
-    ['pumpkin_name'] = 'Pumpkin', 
--- ❓ corn
-    ['corn_fields'] = 'Corn Farm',
-    ['corn_name'] = 'Corn', 
+    ['wheat_name'] = 'Wheat',  
+    ['GroundWheats'] = 'Ground Wheat Flour',     
+    ['picking_wheat'] = 'Picking Up Bundle of Wheat',
+    ['wheat_processingbar'] = 'Grinding Wheat',
+    ['wheat_processing'] = 'Ground ' ..Config.WheatProcessing,
+    ['wheat_trader'] = 'Ground ' ..Config.WheatSack.. ' sack of wheat flour',
+    ['error_wheatgrinding'] = 'You don\'t have a wheat bundle to grind.', 
 
 }
  
@@ -513,7 +562,6 @@ Config.Alerts = {
 -- ❓ wheat
  
 
-
 -- added because I don't like chasing down data
 -- 
 Config.Inventory={}
@@ -521,83 +569,220 @@ Config.Inventory={}
     Config.Inventory['Apple'] = {}
         Config.Inventory['Apple'].db_obj = "Apple"
         Config.Inventory['Apple'].in_game_obj = "Apple"    
+    Config.Inventory['AppleJuice'] = {}
+        Config.Inventory['AppleJuice'].db_obj = "AppleJuice"
+        Config.Inventory['AppleJuice'].in_game_obj = "AppleJuice" 
+    Config.Inventory['AppleJelly'] = {}
+        Config.Inventory['AppleJelly'].db_obj = "AppleJelly"
+        Config.Inventory['AppleJelly'].in_game_obj = "AppleJelly" 
+    Config.Inventory['ApplePie'] = {}
+        Config.Inventory['ApplePie'].db_obj = "ApplePie"
+        Config.Inventory['ApplePie'].in_game_obj = "ApplePie" 
+    Config.Inventory['ApplePieSlice'] = {}
+        Config.Inventory['ApplePieSlice'].db_obj = "ApplePieSlice"
+        Config.Inventory['ApplePieSlice'].in_game_obj = "ApplePieSlice" 
+
 -- ❓ lettuce
     Config.Inventory['Lettuce'] = {}
         Config.Inventory['Lettuce'].db_obj = "Lettuce"
         Config.Inventory['Lettuce'].in_game_obj = "Lettuce"   
+    Config.Inventory['HouseSalad'] = {}
+        Config.Inventory['HouseSalad'].db_obj = "HouseSalad"
+        Config.Inventory['HouseSalad'].in_game_obj = "HouseSalad"   
+    Config.Inventory['GreekSalad'] = {}
+        Config.Inventory['GreekSalad'].db_obj = "GreekSalad"
+        Config.Inventory['GreekSalad'].in_game_obj = "GreekSalad"   
+
 -- ❓ onions
     Config.Inventory['Onion'] = {}
         Config.Inventory['Onion'].db_obj = "Onion"
-        Config.Inventory['Onion'].in_game_obj = "Onion"   
+        Config.Inventory['Onion'].in_game_obj = "Onion"  
+    Config.Inventory['PickledOnions'] = {} 
+        Config.Inventory['PickledOnions'].db_obj = "PickledOnions"
+        Config.Inventory['PickledOnions'].in_game_obj = "PickledOnions"  
+
 -- ❓ cucumber
     Config.Inventory['Cucumber'] = {}
         Config.Inventory['Cucumber'].db_obj = "Cucumber"
-        Config.Inventory['Cucumber'].in_game_obj = "Cucumber"   
+        Config.Inventory['Cucumber'].in_game_obj = "Cucumber"  
+    Config.Inventory['SweetPickles'] = {}
+        Config.Inventory['SweetPickles'].db_obj = "SweetPickles"
+        Config.Inventory['SweetPickles'].in_game_obj = "SweetPickles" 
+    Config.Inventory['DillPickles'] = {}
+        Config.Inventory['DillPickles'].db_obj = "DillPickles"
+        Config.Inventory['DillPickles'].in_game_obj = "DillPickles" 
+    Config.Inventory['SpicyPickles'] = {}
+        Config.Inventory['SpicyPickles'].db_obj = "SpicyPickles"
+        Config.Inventory['SpicyPickles'].in_game_obj = "SpicyPickles" 
+    Config.Inventory['BreadAndButterPickles'] = {}
+        Config.Inventory['BreadAndButterPickles'].db_obj = "BreadAndButterPickles"
+        Config.Inventory['BreadAndButterPickles'].in_game_obj = "BreadAndButterPickles" 
+
 -- ❓ rice
     Config.Inventory['Rice'] = {}
         Config.Inventory['Rice'].db_obj = "Rice"
         Config.Inventory['Rice'].in_game_obj = "Rice"   
+    Config.Inventory['RiceBalls'] = {}
+        Config.Inventory['RiceBalls'].db_obj = "RiceBalls"
+        Config.Inventory['RiceBalls'].in_game_obj = "RiceBalls"   
+
 -- ❓ barley
     Config.Inventory['Barley'] = {}
         Config.Inventory['Barley'].db_obj = "Barley"
         Config.Inventory['Barley'].in_game_obj = "Barley"   
+
 -- ❓ wheat
     Config.Inventory['Wheat'] = {}
         Config.Inventory['Wheat'].db_obj = "Wheat"
-        Config.Inventory['Wheat'].in_game_obj = "Wheat"   
+        Config.Inventory['Wheat'].in_game_obj = "Wheat" 
+    Config.Inventory['WheatFlour'] = {}
+        Config.Inventory['WheatFlour'].db_obj = "WheatFlour"
+        Config.Inventory['WheatFlour'].in_game_obj = "WheatFlour"      
+
 -- ❓ lemons
     Config.Inventory['Lemons'] = {}
         Config.Inventory['Lemons'].db_obj = "Lemons"
-        Config.Inventory['Lemons'].in_game_obj = "Lemons"   
+        Config.Inventory['Lemons'].in_game_obj = "Lemons" 
+    Config.Inventory['Lemonade'] = {}
+        Config.Inventory['Lemonade'].db_obj = "Lemonade"
+        Config.Inventory['Lemonade'].in_game_obj = "Lemonade" 
+    Config.Inventory['LemonBars'] = {}
+        Config.Inventory['LemonBars'].db_obj = "LemonBars"
+        Config.Inventory['LemonBars'].in_game_obj = "LemonBars" 
+    Config.Inventory['LemonMeringuePie'] = {}
+        Config.Inventory['LemonMeringuePie'].db_obj = "LemonMeringuePie"
+        Config.Inventory['LemonMeringuePie'].in_game_obj = "LemonMeringuePie" 
+    Config.Inventory['LemonMeringuePieSlice'] = {}
+        Config.Inventory['LemonMeringuePieSlice'].db_obj = "LemonMeringuePieSlice"
+        Config.Inventory['LemonMeringuePieSlice'].in_game_obj = "LemonMeringuePieSlice" 
+
 -- ❓ limes
     Config.Inventory['Limes'] = {}
         Config.Inventory['Limes'].db_obj = "Limes"
         Config.Inventory['Limes'].in_game_obj = "Limes"   
+
 -- ❓ peaches
     Config.Inventory['Peach'] = {}
         Config.Inventory['Peach'].db_obj = "Peach"
         Config.Inventory['Peach'].in_game_obj = "Peach"   
+    Config.Inventory['PeachCobbler'] = {}
+        Config.Inventory['PeachCobbler'].db_obj = "PeachCobbler"
+        Config.Inventory['PeachCobbler'].in_game_obj = "PeachCobbler" 
+    Config.Inventory['PeachCobblerSlice'] = {}
+        Config.Inventory['PeachCobblerSlice'].db_obj = "PeachCobblerSlice"
+        Config.Inventory['PeachCobblerSlice'].in_game_obj = "PeachCobblerSlice" 
+    Config.Inventory['CannedPeachs'] = {}
+        Config.Inventory['CannedPeachs'].db_obj = "CannedPeachs"
+        Config.Inventory['CannedPeachs'].in_game_obj = "CannedPeachs"  
+
 -- ❓ avacado
     Config.Inventory['Avacado'] = {}
         Config.Inventory['Avacado'].db_obj = "Avacado"
         Config.Inventory['Avacado'].in_game_obj = "Avacado"   
+
 -- ❓ pecans
     Config.Inventory['Pecan'] = {}
         Config.Inventory['Pecan'].db_obj = "Pecan"
         Config.Inventory['Pecan'].in_game_obj = "Pecan"  
+
 -- ❓ pumpkin
     Config.Inventory['Pumpkin'] = {}
         Config.Inventory['Pumpkin'].db_obj = "Pumpkin"
         Config.Inventory['Pumpkin'].in_game_obj = "Pumpkin"  
+    Config.Inventory['PumpkinPie'] = {}
+        Config.Inventory['PumpkinPie'].db_obj = "PumpkinPie"
+        Config.Inventory['PumpkinPie'].in_game_obj = "PumpkinPie"  
+    Config.Inventory['PumpkinPieSlice'] = {}
+        Config.Inventory['PumpkinPieSlice'].db_obj = "PumpkinPieSlice"
+        Config.Inventory['PumpkinPieSlice'].in_game_obj = "PumpkinPieSlice"
+
 -- ❓ corn
     Config.Inventory['Corn'] = {}
         Config.Inventory['Corn'].db_obj = "Corn"
         Config.Inventory['Corn'].in_game_obj = "Corn"  
+    Config.Inventory['CannedCorn'] = {}
+        Config.Inventory['CannedCorn'].db_obj = "CannedCorn"
+        Config.Inventory['CannedCorn'].in_game_obj = "CannedCorn"  
+
 -- ❓ tomatoes
     Config.Inventory['Tomatoes'] = {}
         Config.Inventory['Tomatoes'].db_obj = "Tomatoes"
         Config.Inventory['Tomatoes'].in_game_obj = "Tomatoes"  
+    Config.Inventory['TomatoPaste'] = {}
+        Config.Inventory['TomatoPaste'].db_obj = "TomatoPaste"
+        Config.Inventory['TomatoPaste'].in_game_obj = "TomatoPaste"   
+
 -- ❓ grapes
     Config.Inventory['Grapes'] = {}
         Config.Inventory['Grapes'].db_obj = "Grapes"
         Config.Inventory['Grapes'].in_game_obj = "Grapes"  
+    Config.Inventory['Whine'] = {}
+        Config.Inventory['Whine'].db_obj = "Whine"
+        Config.Inventory['Whine'].in_game_obj = "Whine"  
+    Config.Inventory['GrapeJuice'] = {}
+        Config.Inventory['GrapeJuice'].db_obj = "GrapeJuice"
+        Config.Inventory['GrapeJuice'].in_game_obj = "GrapeJuice"  
+    Config.Inventory['GrapeJelly'] = {}
+        Config.Inventory['GrapeJelly'].db_obj = "GrapeJelly"
+        Config.Inventory['GrapeJelly'].in_game_obj = "GrapeJelly"  
+
 -- ❓ chillypeppers
     Config.Inventory['ChilliPeppers'] = {}
         Config.Inventory['ChilliPeppers'].db_obj = "ChilliPeppers"
-        Config.Inventory['ChilliPeppers'].in_game_obj = "ChilliPeppers"  
+        Config.Inventory['ChilliPeppers'].in_game_obj = "ChilliPeppers" 
+    Config.Inventory['PickledChilliPeppers'] = {}
+        Config.Inventory['PickledChilliPeppers'].db_obj = "PickledChilliPeppers"
+        Config.Inventory['PickledChilliPeppers'].in_game_obj = "PickledChilliPeppers" 
+    Config.Inventory['HotSauce'] = {}
+        Config.Inventory['HotSauce'].db_obj = "HotSauce"
+        Config.Inventory['HotSauce'].in_game_obj = "HotSauce" 
+
 -- ❓ greenpeppers
     Config.Inventory['GreenPeppers'] = {}
         Config.Inventory['GreenPeppers'].db_obj = "GreenPeppers"
         Config.Inventory['GreenPeppers'].in_game_obj = "GreenPeppers"  
+    Config.Inventory['PickledGreenPeppers'] = {} 
+        Config.Inventory['PickledGreenPeppers'].db_obj = "PickledGreenPeppers"
+        Config.Inventory['PickledGreenPeppers'].in_game_obj = "PickledGreenPeppers"  
+
 -- ❓ pig
     Config.Inventory['Pig'] = {}
-        Config.Inventory['Pig'].db_obj = "GreenPeppers"
-        Config.Inventory['Pig'].in_game_obj = "GreenPeppers"  
+        Config.Inventory['Pig'].db_obj = "Pig"
+        Config.Inventory['Pig'].in_game_obj = "Pig"  
+    Config.Inventory['PorkHam'] = {}
+        Config.Inventory['PorkHam'].db_obj = "PorkHam"
+        Config.Inventory['PorkHam'].in_game_obj = "PorkHam"  
+    Config.Inventory['PorkBacon'] = {}
+        Config.Inventory['PorkBacon'].db_obj = "PorkBacon"
+        Config.Inventory['PorkBacon'].in_game_obj = "PorkBacon"  
+    Config.Inventory['PorkChop'] = {}
+        Config.Inventory['PorkChop'].db_obj = "PorkChop"
+        Config.Inventory['PorkChop'].in_game_obj = "PorkChop"  
+    Config.Inventory['PorkTenderloin'] = {}
+        Config.Inventory['PorkTenderloin'].db_obj = "PorkTenderloin"
+        Config.Inventory['PorkTenderloin'].in_game_obj = "PorkTenderloin"  
+    Config.Inventory['PorkSausage'] = {}
+        Config.Inventory['PorkSausage'].db_obj = "PorkSausage"
+        Config.Inventory['PorkSausage'].in_game_obj = "PorkSausage"  
+ 
 -- ❓ cow
     Config.Inventory['Cow'] = {}
-        Config.Inventory['Cow'].db_obj = "GreenPeppers"
-        Config.Inventory['Cow'].in_game_obj = "GreenPeppers"  
+        Config.Inventory['Cow'].db_obj = "Cow"
+        Config.Inventory['Cow'].in_game_obj = "Cow"  
+    Config.Inventory['BeefRoast'] = {}
+        Config.Inventory['BeefRoast'].db_obj = "BeefRoast"
+        Config.Inventory['BeefRoast'].in_game_obj = "BeefRoast" 
+    Config.Inventory['BeefSteak'] = {}
+        Config.Inventory['BeefSteak'].db_obj = "BeefSteak"
+        Config.Inventory['BeefSteak'].in_game_obj = "BeefSteak"
+    Config.Inventory['BeefRibs'] = {}
+        Config.Inventory['BeefRibs'].db_obj = "BeefRibs"
+        Config.Inventory['BeefRibs'].in_game_obj = "BeefRibs"
+    Config.Inventory['BeefHamburger'] = {}
+        Config.Inventory['BeefHamburger'].db_obj = "BeefHamburger"
+        Config.Inventory['BeefHamburger'].in_game_obj = "BeefHamburger"
+
 -- ❓ chicken
     Config.Inventory['Chicken'] = {}
-        Config.Inventory['Chicken'].db_obj = "GreenPeppers"
-        Config.Inventory['Chicken'].in_game_obj = "GreenPeppers"  
+        Config.Inventory['Chicken'].db_obj = "Chicken"
+        Config.Inventory['Chicken'].in_game_obj = "Chicken"  

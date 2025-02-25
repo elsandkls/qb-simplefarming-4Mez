@@ -34,8 +34,8 @@ PumpkinFieldZone = {
 
 PumpkinField = {
     [1] = {
-        label = "Pumpkin Field",
-        fruit = "Pumpkin",
+        label = "Pumpkin Field",  -- updated automatically based on language file func - fix_lables_plant_farms()
+        fruit = "Pumpkin",  -- updated automatically based on language file func - fix_lables_plant_farms()
         db_obj = Config.Inventory['Pumpkin'].db_obj,
         in_game_obj = Config.Inventory['Pumpkin'].in_game_obj,
         BlipCoord = vector3(509.84, 6491.57, 30.65),
@@ -167,7 +167,7 @@ RegisterNetEvent('qb-simplefarming:pumpkinpie', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:pumpkincheck', function(pumpkin)
     if pumpkin then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['pumpkin_processingbar'], Config.ProcessingTime['pumpkin_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('pumpkin_processing', Config.Alerts['pumpkin_processingbar'], Config.ProcessingTime['pumpkin_smashingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

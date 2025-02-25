@@ -339,7 +339,7 @@ RegisterNetEvent('qb-simplefarming:pickeledgreenpepper', function()
       QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
       end)
     elseif not greenpepper then
-        QBCore.Functions.Notify(Config.Alerts['error_greenpeppermashing'], "error", 3000)
+        QBCore.Functions.Notify(Config.Alerts['error_greenpepperslicing'], "error", 3000)
     end
   end)
 end)

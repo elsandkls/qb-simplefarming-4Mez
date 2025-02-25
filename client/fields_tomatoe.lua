@@ -213,9 +213,6 @@ RegisterNetEvent('qb-simplefarming:tomatoefields', function()
       QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
     end)
   end)
-    
-
-
 
 
 -- Tomatoe --
@@ -335,7 +332,7 @@ else
   end)
 end
  
-RegisterNetEvent('qb-simplefarming:makingtomatoesauce', function()
+RegisterNetEvent('qb-simplefarming:makingtomatoepaste', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:tomatoescheck', function(tomatoes)
     if tomatoes then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})

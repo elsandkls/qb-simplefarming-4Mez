@@ -1,4 +1,3 @@
-
 -- ❓ onions  
 -- TODO
 -- ✅ add new data field for onion
@@ -18,8 +17,8 @@ OnionFieldZone = {
   
 OnionFields = {
     [1] = {
-        label = "Onion Field",
-        fruit = "Onion",
+        label = "Onion Field", -- updated automatically based on language file func - fix_lables_plant_farms()
+        fruit = "Onion", -- updated automatically based on language file func - fix_lables_plant_farms()
         db_obj = Config.Inventory['Onion'].db_obj,
         in_game_obj = Config.Inventory['Onion'].in_game_obj,
         BlipCoord = vector3(656.5, 6475.94, 31.98),
@@ -161,7 +160,7 @@ RegisterNetEvent('qb-simplefarming:pickeledonions', function()
       QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
       end)
     elseif not onion then
-        QBCore.Functions.Notify(Config.Alerts['error_onionsmashing'], "error", 3000)
+        QBCore.Functions.Notify(Config.Alerts['error_onionslicing'], "error", 3000)
     end
   end)
 end)

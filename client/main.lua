@@ -47,7 +47,7 @@ RegisterNetEvent('qb-simplefarming:menuprocessor', function()
     {
         header = 'Make TomatoPaste',
         params = {
-            event = 'qb-simplefarming:makingtomatoesauce',
+            event = 'qb-simplefarming:makingtomatoepaste',
         }
     },
 }

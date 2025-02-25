@@ -13,12 +13,7 @@ WheatFieldZone = {
         distance = 5,
     },
 }
-
-
--- ❓ wheat 
--- TODO
--- ✅ add new data field for lettuce trees
--- ❓ find coords (zones, and blips), and adjust sizes as needed
+ 
 WheatFields = {
     [1] = {
         label = "Wheat Field",  -- updated automatically based on language file func - fix_lables_plant_farms()
@@ -113,7 +108,7 @@ if Config.UseBlips then
         WheatFieldLocation:onPlayerInOut(function(isPointInside)
           if isPointInside then
             inZone = true
-            TriggerEvent('WheatField')
+            TriggerEvent('qb-simplefarming:wheat')
           else
             for _, v in pairs(WheatsFieldZones) do
               exports['qb-target']:RemoveZone(v.Name)
@@ -136,7 +131,7 @@ if Config.UseBlips then
         WheatFieldLocation:onPlayerInOut(function(isPointInside)
           if isPointInside then
             inZone = true
-            TriggerEvent('WheatField')
+            TriggerEvent('qb-simplefarming:wheat')
           else
             for _, v in pairs(WheatsFieldZones) do
               exports['qb-target']:RemoveZone(v.Name)
