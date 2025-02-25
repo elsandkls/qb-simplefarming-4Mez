@@ -533,10 +533,11 @@ Config.Alerts = {
 -- ❓ wheat
     ['wheat_fields'] = 'Wheat Farm',
     ['wheat_name'] = 'Wheat',  
-    ['GroundWheats'] = 'Ground Wheat Flour',     
+    ['GroundWheats'] = 'Sack of Wheat Flour',     
     ['picking_wheat'] = 'Picking Up Bundle of Wheat',
     ['wheat_processingbar'] = 'Grinding Wheat',
     ['wheat_processing'] = 'Ground ' ..Config.WheatProcessing,
+    ['wheat_processed'] = 'Finished Grinding Wheat',
     ['wheat_trader'] = 'Ground ' ..Config.WheatSack.. ' sack of wheat flour',
     ['error_wheatgrinding'] = 'You don\'t have a wheat bundle to grind.', 
 
