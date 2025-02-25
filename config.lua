@@ -1,7 +1,9 @@
+--Start Time: 7:40 pm EST
+--End Time:  
+
 Config = Config or {}
 
 Config.UseBlips = true                                 -- True / false option for toggling farm blips
-
 Config.PedModel = "a_m_m_farmer_01"                    -- Ped model  https://wiki.rage.mp/index.php?title=Peds
 Config.PedHash = 0x94562DD7                            -- Hash numbers for ped model
 
@@ -18,6 +20,7 @@ FoodProcessor = {
     minZ = 43.95,                                       -- qb-target Min
     maxZ = 47.95,                                       -- qb-target Max
 }
+
 DairyProcessor = {
     targetZone = vector3(2567.92, 4684.44, 33.05),
     targetHeading = 330,
@@ -30,6 +33,7 @@ DairyProcessor = {
     minZ = 32.05,
     maxZ = 35.00,
 }
+
 Seller = {
     targetZone = vector3(760.4, -3194.97, 6.07),
     targetHeading = 265.82,
@@ -44,7 +48,6 @@ Seller = {
 }
 
 -- Pig Farm (Food)
-
 Config.PigFood = 5                                      -- Food Amount (Pig Food)
 Config.FoodPrice = 5                                    --  Pig Farm Food Price
 PigFarmer = vector4(2166.11, 5003.84, 40.39, 312.56)    -- Ped Location
@@ -52,6 +55,20 @@ PigFarmerTargetZone = vector3(2166.11, 5003.84, 40.39)  -- QB-Target location
 PigFarmerTzHeading = 305                                -- QB-Target Heading
 PigFarmerMinZ = 40				                    	-- QB-Target MinZ
 PigFarmerMaxZ = 42				                    	-- QB-Target MaxZ
+
+
+--- adding new items 2/24/2025
+-- TODO
+-- ❓ Chickens Farm (Food)
+Config.ChickenFood = 5                                   -- Food Amount (Pig Food)
+Config.ChickenFoodPrice = 5                                    --  Pig Farm Food Price
+ChickenFarmer = vector4(2166.11, 5003.84, 40.39, 312.56)    -- Ped Location
+ChickenFarmerTargetZone = vector3(2166.11, 5003.84, 40.39)  -- QB-Target location
+ChickenFarmerTzHeading = 305                                -- QB-Target Heading
+ChickenFarmerMinZ = 40				                    	-- QB-Target MinZ
+ChickenFarmerMaxZ = 42				                    	-- QB-Target MaxZ
+
+
 
 -- Processing Items
 Config.AppleProcessing = 3                              -- Trading Amount
@@ -67,6 +84,37 @@ Config.GrapeProcessing = 3
 Config.ChillyProcessing = 3
 Config.TomatoesProcessing = 4
 
+--- adding new items 2/24/2025
+-- TODO
+-- ❓ lemons
+Config.LemonsProcessing = 1
+-- ❓ limes
+Config.LimesProcessing = 1
+-- ❓ peaches
+Config.PeachesProcessing = 1
+-- ❓ avacado
+Config.AvacoadosProcessing = 1
+-- ❓ pecans
+Config.PecansProcessing = 1
+-- ❓ lettuce 
+Config.LettuceProcessing = 1 
+-- ❓ onions
+Config.OnionsProcessing = 1
+-- ❓ cucumber
+Config.CucumbersProcessing = 1
+-- ❓ rice
+Config.RiceProcessing = 1
+-- ❓ barley
+Config.BarleysProcessing = 1
+-- ❓ wheat
+Config.WheatProcessing = 1
+-- ❓ chicken
+Config.ChikcenProcessing = 1
+-- ❓ eggs
+Config.EggsProcessing = 1
+
+
+
 -- Processed Items
 Config.AppleJuice = 1                                   -- Received Amount
 Config.BaconProcessed = 3
@@ -81,6 +129,35 @@ Config.GrapeProcessed = 1
 Config.ChillyProcessed = 1
 Config.TomatoesProcessed = 1
 
+--- adding new items 2/24/2025
+-- TODO
+-- ❓ lemons
+Config.LemonsProcessed = 1
+-- ❓ limes
+Config.LimesProcessed = 1
+-- ❓ peaches
+Config.PeachesProcessed = 1
+-- ❓ avacado
+Config.AvacoadosProcessed = 1
+-- ❓ pecans
+Config.PecansProcessed = 1
+-- ❓ lettuce 
+Config.LettuceProcessed = 1 
+-- ❓ onions
+Config.OnionsProcessed = 1
+-- ❓ cucumber
+Config.CucumbersProcessed = 1
+-- ❓ rice
+Config.RiceProcessed = 1
+-- ❓ barley
+Config.BarleysProcessed = 1
+-- ❓ wheat
+Config.WheatProcessed = 1
+-- ❓ chicken
+Config.ChikcenProcessed = 1
+-- ❓ eggs
+Config.EggsProcessed = 1
+
 -- Processing time
 Config.ProcessingTime = {
     ["apple_processingtime"] = 5000,                    -- MS = Seconds (5000 ms = 5 seconds)
@@ -94,6 +171,35 @@ Config.ProcessingTime = {
     ["grape_processingtime"] = 7500,
     ["chillypepper_processingtime"] = 7500,
     ["tomatoes_processingtime"] = 7500,
+    --- adding new items 2/24/2025
+    -- TODO
+    -- ❓ lemons
+        ["lemons_processingtime"] = 7500,
+    -- ❓ limes
+        ["limes_processingtime"] = 7500,
+    -- ❓ peaches
+        ["peaches_processingtime"] = 7500,
+    -- ❓ avacado
+        ["avacado_processingtime"] = 7500,
+    -- ❓ pecans
+        ["pecans_processingtime"] = 7500,
+    -- ❓ lettuce  
+        ["lettuce_processingtime"] = 7500,
+    -- ❓ onions
+        ["onions_processingtime"] = 7500,
+    -- ❓ cucumber
+        ["cucumber_processingtime"] = 7500,
+    -- ❓ rice
+        ["rice_processingtime"] = 7500,
+    -- ❓ barley
+        ["barley_processingtime"] = 7500,
+    -- ❓ wheat
+        ["whea_processingtime"] = 7500,
+    -- ❓ chicken
+        ["chicken_processingtime"] = 7500,
+    -- ❓ chicken eggs
+        ["eggs_processingtime"] = 7500,
+
 }
 
 
@@ -182,7 +288,72 @@ Config.Sell = {
     },
     ["cow_leather"] = {
         ["price"] = math.random(25, 35)
-    }
+    },
+
+
+    --- adding new items 2/24/2025
+    -- TODO - trees
+    -- ❓ lemons
+    ["lemons"] = {
+        ["price"] = math.random(5, 10)
+    },
+    -- ❓ limes
+    ["limes"] = {
+        ["price"] = math.random(5, 10)
+    },
+    -- ❓ peaches
+    ["peaches"] = {
+        ["price"] = math.random(5, 10)
+    },
+    -- ❓ avacado
+    ["avacado"] = {
+        ["price"] = math.random(5, 10)
+    },
+    -- ❓ pecans
+    ["pecans"] = {
+        ["price"] = math.random(5, 10)
+    }, 
+
+    -- veg fields
+    -- TODO - veggies
+    -- ❓ lettuce  
+    ["lettuce"] = {
+        ["price"] = math.random(25, 35)
+    },
+    -- ❓ onions
+    ["onions"] = {
+        ["price"] = math.random(3, 10)
+    },
+    -- ❓ cucumber
+    ["cucumber"] = {
+        ["price"] = math.random(3, 10)
+    },
+    -- ❓ rice
+    ["rice"] = {
+        ["price"] = math.random(3, 10)
+    },
+    -- ❓ barley
+    ["barley"] = {
+        ["price"] = math.random(3, 10)
+    },
+    -- ❓ wheat
+    ["wheat"] = {
+        ["price"] = math.random(3, 10)
+    },
+
+    -- chickens
+    ["chicken_carcass"] = {
+        ["price"] = math.random(10, 35)
+    },
+    ["chicken_plucked"] = {
+        ["price"] = math.random(15, 35)
+    },
+    ["chicken_frozen"] = {
+        ["price"] = math.random(20, 35)
+    },
+    ["eggs"] = {
+        ["price"] = math.random(5, 15)
+    },
 
 }
 
@@ -267,4 +438,166 @@ Config.Alerts = {
 
     ['error.soybean'] = 'You don\'t have any soybeans to feed the pigs',
     ['stress'] = 'Your Stress Was Relieved',
+
+    -- 2/24/2025
+    -- adding in farm labels or names
+    -- ❓ pecans
+    ['pecan_farm'] = 'Pecan Farm',
+    ['pecan_name'] = 'Pecan',
+    -- ❓ lemons
+    ['lemon_farm'] = 'Lemon Farm',
+    ['lemon_name'] = 'Lemon',
+    -- ❓ limes
+    ['lime_farm'] = 'Lime Farm',
+    ['lime_name'] = 'Lime',
+    -- ❓ peaches
+    ['peach_farm'] = 'Peach Farm',
+    ['peach_name'] = 'Peach',
+    -- ❓ avacado
+    ['avacado_farm'] = 'Avacado Farm',
+    ['avacado_name'] = 'Avacado',  
+    
+-- 2/24/2025
+-- add support for apples
+    -- ❓ apple
+    ['apple_farm'] = 'Apple Farm',
+    ['apple_name'] = 'Apple',   
+
+
+-- 2/24/2025
+-- adding in fields labels or names
+-- ❓ lettuce  
+    ['lettuce_fields'] = 'Lettuce Fields',
+    ['lettuce_name'] = 'Lettuce', 
+-- ❓ onions
+    ['onion_fields'] = 'Onion Farm',
+    ['onion_name'] = 'Onion', 
+-- ❓ cucumber
+    ['cucumber_fields'] = 'Cucumber Farm',
+    ['cucumber_name'] = 'Cucumber', 
+-- ❓ rice
+    ['rice_fields'] = 'Rice Farm',
+    ['rice_name'] = 'Rice', 
+-- ❓ barley
+    ['barley_fields'] = 'Barley Farm',
+    ['barley_name'] = 'Barley', 
+-- ❓ wheat
+    ['wheat_fields'] = 'Wheat Farm',
+    ['wheat_name'] = 'Wheat', 
+-- ❓ pumpkin
+    ['pumpkin_fields'] = 'Pumpkin Farm',
+    ['pumpkin_name'] = 'Pumpkin', 
+-- ❓ corn
+    ['corn_fields'] = 'Corn Farm',
+    ['corn_name'] = 'Corn', 
+
 }
+ 
+
+-- TODO
+-- New Trees  - milestone update
+-- Play Test Check List
+-- ❓ lemons
+-- ❓ limes
+-- ❓ peaches
+-- ❓ avacado
+-- ❓ pecans
+  
+-- New plants - milestone update
+-- Play Test Check List
+-- ❓ lettuce  
+-- ❓ onions
+-- ❓ cucumber
+-- ❓ rice
+-- ❓ barley
+-- ❓ wheat
+ 
+
+
+-- added because I don't like chasing down data
+-- 
+Config.Inventory={}
+-- ❓ apple
+    Config.Inventory['Apple'] = {}
+        Config.Inventory['Apple'].db_obj = "Apple"
+        Config.Inventory['Apple'].in_game_obj = "Apple"    
+-- ❓ lettuce
+    Config.Inventory['Lettuce'] = {}
+        Config.Inventory['Lettuce'].db_obj = "Lettuce"
+        Config.Inventory['Lettuce'].in_game_obj = "Lettuce"   
+-- ❓ onions
+    Config.Inventory['Onion'] = {}
+        Config.Inventory['Onion'].db_obj = "Onion"
+        Config.Inventory['Onion'].in_game_obj = "Onion"   
+-- ❓ cucumber
+    Config.Inventory['Cucumber'] = {}
+        Config.Inventory['Cucumber'].db_obj = "Cucumber"
+        Config.Inventory['Cucumber'].in_game_obj = "Cucumber"   
+-- ❓ rice
+    Config.Inventory['Rice'] = {}
+        Config.Inventory['Rice'].db_obj = "Rice"
+        Config.Inventory['Rice'].in_game_obj = "Rice"   
+-- ❓ barley
+    Config.Inventory['Barley'] = {}
+        Config.Inventory['Barley'].db_obj = "Barley"
+        Config.Inventory['Barley'].in_game_obj = "Barley"   
+-- ❓ wheat
+    Config.Inventory['Wheat'] = {}
+        Config.Inventory['Wheat'].db_obj = "Wheat"
+        Config.Inventory['Wheat'].in_game_obj = "Wheat"   
+-- ❓ lemons
+    Config.Inventory['Lemons'] = {}
+        Config.Inventory['Lemons'].db_obj = "Lemons"
+        Config.Inventory['Lemons'].in_game_obj = "Lemons"   
+-- ❓ limes
+    Config.Inventory['Limes'] = {}
+        Config.Inventory['Limes'].db_obj = "Limes"
+        Config.Inventory['Limes'].in_game_obj = "Limes"   
+-- ❓ peaches
+    Config.Inventory['Peach'] = {}
+        Config.Inventory['Peach'].db_obj = "Peach"
+        Config.Inventory['Peach'].in_game_obj = "Peach"   
+-- ❓ avacado
+    Config.Inventory['Avacado'] = {}
+        Config.Inventory['Avacado'].db_obj = "Avacado"
+        Config.Inventory['Avacado'].in_game_obj = "Avacado"   
+-- ❓ pecans
+    Config.Inventory['Pecan'] = {}
+        Config.Inventory['Pecan'].db_obj = "Pecan"
+        Config.Inventory['Pecan'].in_game_obj = "Pecan"  
+-- ❓ pumpkin
+    Config.Inventory['Pumpkin'] = {}
+        Config.Inventory['Pumpkin'].db_obj = "Pumpkin"
+        Config.Inventory['Pumpkin'].in_game_obj = "Pumpkin"  
+-- ❓ corn
+    Config.Inventory['Corn'] = {}
+        Config.Inventory['Corn'].db_obj = "Corn"
+        Config.Inventory['Corn'].in_game_obj = "Corn"  
+-- ❓ tomatoes
+    Config.Inventory['Tomatoes'] = {}
+        Config.Inventory['Tomatoes'].db_obj = "Tomatoes"
+        Config.Inventory['Tomatoes'].in_game_obj = "Tomatoes"  
+-- ❓ grapes
+    Config.Inventory['Grapes'] = {}
+        Config.Inventory['Grapes'].db_obj = "Grapes"
+        Config.Inventory['Grapes'].in_game_obj = "Grapes"  
+-- ❓ chillypeppers
+    Config.Inventory['ChilliPeppers'] = {}
+        Config.Inventory['ChilliPeppers'].db_obj = "ChilliPeppers"
+        Config.Inventory['ChilliPeppers'].in_game_obj = "ChilliPeppers"  
+-- ❓ greenpeppers
+    Config.Inventory['GreenPeppers'] = {}
+        Config.Inventory['GreenPeppers'].db_obj = "GreenPeppers"
+        Config.Inventory['GreenPeppers'].in_game_obj = "GreenPeppers"  
+-- ❓ pig
+    Config.Inventory['Pig'] = {}
+        Config.Inventory['Pig'].db_obj = "GreenPeppers"
+        Config.Inventory['Pig'].in_game_obj = "GreenPeppers"  
+-- ❓ cow
+    Config.Inventory['Cow'] = {}
+        Config.Inventory['Cow'].db_obj = "GreenPeppers"
+        Config.Inventory['Cow'].in_game_obj = "GreenPeppers"  
+-- ❓ chicken
+    Config.Inventory['Chicken'] = {}
+        Config.Inventory['Chicken'].db_obj = "GreenPeppers"
+        Config.Inventory['Chicken'].in_game_obj = "GreenPeppers"  

@@ -90,7 +90,7 @@ CreateThread(function()
     FreezeEntityPosition(pedfarmer4, true)
   end)
 
-RegisterNetEvent('qb-simplefarming:slaughter1', function()
+RegisterNetEvent('qb-simplefarming:slaughtercow1', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:weapon_knife', function(hasItem)
     if hasItem then
       if DoesEntityExist(pedcow) then
@@ -119,7 +119,7 @@ RegisterNetEvent('qb-simplefarming:slaughter1', function()
   end)
 end)
 
-RegisterNetEvent('qb-simplefarming:slaughter2', function()
+RegisterNetEvent('qb-simplefarming:slaughtercow2', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:weapon_knife', function(hasItem)
     if hasItem then
       if DoesEntityExist(pedcow1) then
@@ -148,7 +148,7 @@ RegisterNetEvent('qb-simplefarming:slaughter2', function()
 end)
 
 
-RegisterNetEvent('qb-simplefarming:slaughter3', function()
+RegisterNetEvent('qb-simplefarming:slaughtercow3', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:weapon_knife', function(hasItem)
     if hasItem then
       if DoesEntityExist(pedcow2) then
@@ -176,7 +176,7 @@ RegisterNetEvent('qb-simplefarming:slaughter3', function()
   end)
 end)
 
-RegisterNetEvent('qb-simplefarming:slaughter4', function()
+RegisterNetEvent('qb-simplefarming:slaughtercow4', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:weapon_knife', function(hasItem)
     if hasItem then
       if DoesEntityExist(pedcow3) then
