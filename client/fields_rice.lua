@@ -108,7 +108,7 @@ if Config.UseBlips then
         RiceFieldLocation:onPlayerInOut(function(isPointInside)
           if isPointInside then
             inZone = true
-            TriggerEvent('RiceField')
+            TriggerEvent('qb-simplefarming:rice')
           else
             for _, v in pairs(RiceFieldZone) do
               exports['qb-target']:RemoveZone(v.Name)
@@ -131,7 +131,7 @@ if Config.UseBlips then
         RiceFieldLocation:onPlayerInOut(function(isPointInside)
           if isPointInside then
             inZone = true
-            TriggerEvent('RiceField')
+            TriggerEvent('qb-simplefarming:rice')
           else
             for _, v in pairs(RiceFieldZone) do
               exports['qb-target']:RemoveZone(v.Name)
@@ -146,11 +146,32 @@ if Config.UseBlips then
 
   
 
-RegisterNetEvent('qb-simplefarming:pickeledrice', function()
+RegisterNetEvent('qb-simplefarming:riceballs', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:ricecheck', function(rice)
     if rice then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('rice_processing', Config.Alerts['rice_processingbar'], Config.ProcessingTime['rice_smashingtime'] , false, true, {
+      QBCore.Functions.Progressbar('rice_processing', Config.Alerts['rice_processingbar'], Config.ProcessingTime['rice_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent("qb-simplefarming:riceprocessing")
+      end, function()
+      QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not rice then
+        QBCore.Functions.Notify(Config.Alerts['error_riceballmashing'], "error", 3000)
+    end
+  end)
+end)
+
+RegisterNetEvent('qb-simplefarming:riceflour', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:ricecheck', function(rice)
+    if rice then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('rice_processing', Config.Alerts['rice_processingbar'], Config.ProcessingTime['rice_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,

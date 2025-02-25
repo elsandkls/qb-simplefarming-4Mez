@@ -1,5 +1,6 @@
 --Start Time: 7:40 pm EST
---End Time:  
+--End Time:  4:13 am EST 
+-- 1 hr break for lunch
 
 Config = Config or {}
 
@@ -161,16 +162,21 @@ Config.EggsProcessed = 1
 -- Processing time
 Config.ProcessingTime = {
     ["apple_processingtime"] = 5000,                    -- MS = Seconds (5000 ms = 5 seconds)
+
     ["beef_processingtime"] = 10000,
+    ["milk_tradingtime"] = 7500,
+
     ["bacon_processingtime"] = 10000,
     ["ham_processingtime"] = 10000,
     ["pork_processingtime"] = 10000,
     ["sausage_processingtime"] = 10000,
-    ["milk_tradingtime"] = 7500,
+     
     ["pumpkin_smashingtime"] = 7500,
     ["grape_processingtime"] = 7500,
     ["chillypepper_processingtime"] = 7500,
+    ["greenpepper_processingtime"] = 7500,
     ["tomatoes_processingtime"] = 7500,
+    ["corn_processingtime"] = 7500,
     --- adding new items 2/24/2025
     -- TODO
     -- ❓ lemons
@@ -522,7 +528,19 @@ Config.Alerts = {
 
 -- ❓ rice
     ['rice_fields'] = 'Rice Farm',
-    ['rice_name'] = 'Rice', 
+    ['rice_name'] = 'Rice',  
+    ['GroundRice'] = 'Sack of Rice Flour',  
+    ['RiceBalls'] = 'Balls of Rice',   
+    ['picking_rice'] = 'Picking Up Sack of Rice',
+    ['riceflour_processingbar'] = 'Grinding Rice',
+    ['riceflour_processing'] = 'Ground ' ..Config.RiceProcessing,
+    ['rice_processed'] = 'Finished Cooking Rice',
+    ['riceball_processed'] = 'Finished Rolling Balls of Rice', 
+    ['riceflour_processed'] = 'Finished Grinding Rice',  
+    ['riceflour_trader'] = 'Ground ' ..Config.RiceSack.. ' sack of rice flour',
+    ['riceball_trader'] = 'Ground ' ..Config.RiceBalls.. ' balls of rice',
+    ['error_ricemashing'] = 'You don\'t have a rice sack to grind.', 
+    ['error_riceballmashing'] = 'You don\'t have a rice sack to cook.', 
 
 
 -- ❓ barley
@@ -540,7 +558,6 @@ Config.Alerts = {
     ['wheat_processed'] = 'Finished Grinding Wheat',
     ['wheat_trader'] = 'Ground ' ..Config.WheatSack.. ' sack of wheat flour',
     ['error_wheatgrinding'] = 'You don\'t have a wheat bundle to grind.', 
-
 }
  
 
@@ -626,6 +643,9 @@ Config.Inventory={}
     Config.Inventory['RiceBalls'] = {}
         Config.Inventory['RiceBalls'].db_obj = "RiceBalls"
         Config.Inventory['RiceBalls'].in_game_obj = "RiceBalls"   
+    Config.Inventory['RiceFlour'] = {}
+        Config.Inventory['RiceFlour'].db_obj = "RiceFlour"
+        Config.Inventory['RiceFlour'].in_game_obj = "RiceFlour"  
 
 -- ❓ barley
     Config.Inventory['Barley'] = {}

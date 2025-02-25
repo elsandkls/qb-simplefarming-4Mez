@@ -336,7 +336,7 @@ RegisterNetEvent('qb-simplefarming:makingtomatoepaste', function()
   QBCore.Functions.TriggerCallback('qb-simplefarming:tomatoescheck', function(tomatoes)
     if tomatoes then
       TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
-      QBCore.Functions.Progressbar('dairy_processing', Config.Alerts['tomatoes_processing'], Config.ProcessingTime['tomatoes_processingtime'] , false, true, {
+      QBCore.Functions.Progressbar('tomatoes_processing', Config.Alerts['tomatoes_processing'], Config.ProcessingTime['tomatoes_processingtime'] , false, true, {
       disableMovement = true,
       disableCarMovement = true,
       disableMouse = false,
