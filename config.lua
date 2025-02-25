@@ -80,6 +80,8 @@ Config.PorkProcessing = 1
 Config.SausageProcessing = 2
 Config.MilkProcessing = 2
 Config.PumpkinProcessing = 1
+Config.PumpkinPieProcessing = 1
+Config.PumpkinPieSlicesProcessing = 1
 Config.CornProcessing = 2
 Config.GrapeProcessing = 3
 Config.ChillyProcessing = 3
@@ -130,6 +132,8 @@ Config.GrapeProcessed = 1
 Config.ChillyProcessed = 1
 Config.TomatoesProcessed = 1
 
+Config.PumpkinBoxes = 3
+Config.PumpkinPieSlices = 3
 --- adding new items 2/24/2025
 -- TODO
 -- ❓ lemons
@@ -415,6 +419,10 @@ Config.Alerts = {
     ['pumpkin_trader'] = 'Made ' ..Config.PumpkinBoxes.. ' boxes of pumpkin pie',
     ['error_pumpkinsmashing'] = 'You don\'t have any pumpkins to smash',
 
+    ['pumpkinpieslice_trader'] = 'Made ' ..Config.PumpkinPieSlices.. ' Slices of pumpkin pie',
+    ['pumpkinpie_processing'] = 'Slicing ' ..Config.PumpkinPieProcessing,
+    ['error_pumpkinpieslicing'] = 'You don\'t have any pumpkin pies to slice',
+   
 -- ❓ corn
     ['corn_fields'] = 'Corn Farm',
     ['corn_name'] = 'Corn', 

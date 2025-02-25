@@ -1,6 +1,5 @@
 
 --- Useable Items
-  
 QBCore.Functions.CreateUseableItem(Config.Inventory['PumpkinPieSlice'].db_obj, function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 	  if Player.Functions.RemoveItem(item.name, 1, item.slot) then
@@ -49,6 +48,37 @@ RegisterServerEvent('qb-simplefarming:pumpkinprocessing', function()
     TriggerClientEvent('QBCore:Notify', source, Config.Alerts['pumpkin_trader'])
 end)
 
+
+RegisterServerEvent('qb-simplefarming:pumpkinpieprocessing', function()
+    local source = source
+    local Player = QBCore.Functions.GetPlayer(tonumber(source))
+    local pumpkin = Player.Functions.GetItemByName(Config.Inventory['Pumpkin'].db_obj)
+    if not pumpkin then
+        TriggerClientEvent('QBCore:Notify', source, Config.Alerts['error_pumpkinpieslicing'])
+        return false
+    end
+
+    local amount = pumpkin.amount
+    if amount >= 1 then
+        amount = Config.PumpkinPieProcessing
+    else
+      return false
+    end
+
+    if not Player.Functions.RemoveItem(Config.Inventory['PumpkinPie'].db_obj, amount) then
+        TriggerClientEvent('QBCore:Notify', source, Config.Alerts['itemamount'])
+        return false
+    end
+
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Config.Inventory['PumpkinPie'].db_obj], "remove")
+    TriggerClientEvent('QBCore:Notify', source, Config.Alerts['pumpkinpie_processing'])
+    local Pumpkins = Config.PumpkinBoxes
+    Wait(750)
+    Player.Functions.AddItem(Config.Inventory['PumpkinPieSlice'].db_obj, Pumpkins)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Config.Inventory['PumpkinPieSlice'].db_obj], "add")
+    TriggerClientEvent('QBCore:Notify', source, Config.Alerts['pumpkinpieslice_trader'])
+end)
+
 QBCore.Functions.CreateCallback('qb-simplefarming:pumpkincheck', function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then
@@ -67,6 +97,7 @@ end)
 --[[ 
   Config.Alerts['pumpkin_fields'] = 'Pumpkin Farm',
   Config.Alerts['pumpkin_name'] = 'Pumpkin', 
+  
   Config.Alerts['sliceofpumpkinpie'] = 'Slice of Pumpkin Pie',        
   Config.Alerts['pumpkinpie'] = 'Pumpkin Pie',
   Config.Alerts['picking_pumpkins'] = 'Picking Up Pumpkin',
@@ -74,6 +105,10 @@ end)
   Config.Alerts['pumpkin_processing'] = 'Smashed ' ..Config.PumpkinProcessing,
   Config.Alerts['pumpkin_trader'] = 'Made ' ..Config.PumpkinBoxes.. ' Boxes of pumpkin pie',
   Config.Alerts['error_pumpkinsmashing'] = 'You don\'t have any pumpkins to smash',
+
+  Config.Alerts['pumpkinpieslice_trader'] = 'Made ' ..Config.PumpkinPieSlices.. ' Slices of pumpkin pie',
+  Config.Alerts['pumpkinpie_processing'] = 'Slicing ' ..Config.PumpkinPieProcessing,
+  Config.Alerts['error_pumpkinpieslicing'] = 'You don\'t have any pumpkin pies to slice',
  
  Config.Inventory['Pumpkin'] = {}
  Config.Inventory['Pumpkin'].db_obj = "Pumpkin"

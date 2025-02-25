@@ -183,3 +183,24 @@ RegisterNetEvent('qb-simplefarming:pumpkinpie', function()
     end
   end)
 end)
+
+RegisterNetEvent('qb-simplefarming:pumpkinpieslices', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:pumpkincheck', function(pumpkin)
+    if pumpkin then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('pumpkinpie_processing', Config.Alerts['pumpkinpie_processingbar'], Config.ProcessingTime['pumpkinpie_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent("qb-simplefarming:pumpkinpieprocessing")
+      end, function()
+      QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not pumpkin then
+        QBCore.Functions.Notify(Config.Alerts['error_pumpkinpieslicing'], "error", 3000)
+    end
+  end)
+end)
