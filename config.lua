@@ -543,7 +543,25 @@ Config.Alerts = {
 -- ❓ cucumber
     ['cucumber_fields'] = 'Cucumber Farm',
     ['cucumber_name'] = 'Cucumber', 
-
+    ['Cucumber'] = 'Cucumber',
+    ['SlicedCucumber'] = 'Sliced Cucumbers',
+    ['SweetPickles'] = 'Sweet Pickles',
+    ['DillPickles'] = 'Dill Pickles',
+    ['SpicyPickles'] = 'Spicy Pickles', 
+    ['BreadAndButterPickles'] = 'Bread And Butter Pickles Pickles', 
+    ['picking_cucumbers'] = 'Picking Up Cucumber',
+    ['slicingcucumbers_processingbar'] = 'Slicing Cucumbers',
+    ['picklingcucumbers_processingbar'] = 'Pickling Cucumbers',
+    ['slicingcucumbers_processing'] = 'Sliced ' ..Config.CucumberProcessing,
+    ['picklingcucumbers_processing'] = 'Sliced ' ..Config.CucumberProcessing,
+    ['slicedcucumber_trader'] = 'Made ' ..Config.SlicedCucumber.. ' sliced cucumbers',
+    ['sweetpickles_trader'] = 'Made ' ..Config.SweetPickles.. ' Jar(s) of Sweet Pickles',
+    ['dillpickles_trader'] = 'Made ' ..Config.DillPickles.. ' Jar(s) of Dill Pickles',
+    ['spicypickles_trader'] = 'Made ' ..Config.SpicyPickles.. ' Jar(s) of Spicy Pickles',
+    ['breadandbutterpickles_trader'] = 'Made ' ..Config.BreadAndButterPickles.. ' Jar(s) of Bread And Butter Pickles',
+    ['cucumber_trader'] = 'Made ' ..Config.Cucumbers.. ' cucumbers',
+    ['error_cucumberslicing'] = 'You don\'t have any cucumbers to slice',
+    ['error_picklingcucumbers'] = 'You don\'t have any sliced cucumbers to pickle',
 
 -- ❓ rice
     ['rice_fields'] = 'Rice Farm',
@@ -648,6 +666,9 @@ Config.Inventory={}
     Config.Inventory['Cucumber'] = {}
         Config.Inventory['Cucumber'].db_obj = "Cucumber"
         Config.Inventory['Cucumber'].in_game_obj = "Cucumber"  
+    Config.Inventory['SlicedCucumber'] = {}
+        Config.Inventory['SlicedCucumber'].db_obj = "SlicedCucumber"
+        Config.Inventory['SlicedCucumber'].in_game_obj = "SlicedCucumber" 
     Config.Inventory['SweetPickles'] = {}
         Config.Inventory['SweetPickles'].db_obj = "SweetPickles"
         Config.Inventory['SweetPickles'].in_game_obj = "SweetPickles" 

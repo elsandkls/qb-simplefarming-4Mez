@@ -148,7 +148,7 @@ if Config.UseBlips then
   end
    
 
-  RegisterNetEvent('qb-simplefarming:pickeledcucumbers', function()
+  RegisterNetEvent('qb-simplefarming:slicedcucumbers', function()
     QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
       if cucumber then
         TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
@@ -164,7 +164,98 @@ if Config.UseBlips then
         QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
         end)
       elseif not cucumber then
-          QBCore.Functions.Notify(Config.Alerts['error_cucumbersmashing'], "error", 3000)
+          QBCore.Functions.Notify(Config.Alerts['error_cucumberslicing'], "error", 3000)
+      end
+    end)
+  end)
+     
+
+  RegisterNetEvent('qb-simplefarming:sweetpicklesprocessing', function()
+    QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
+      if cucumber then
+        TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_processingtime'] , false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+        }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:sweetpicklesprocessing")
+        end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+        end)
+      elseif not cucumber then
+          QBCore.Functions.Notify(Config.Alerts['error_cucumberslicing'], "error", 3000)
+      end
+    end)
+  end)
+
+     
+
+  RegisterNetEvent('qb-simplefarming:dillpicklesprocessing', function()
+    QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
+      if cucumber then
+        TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_processingtime'] , false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+        }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:dillpicklesprocessing")
+        end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+        end)
+      elseif not cucumber then
+          QBCore.Functions.Notify(Config.Alerts['error_cucumberslicing'], "error", 3000)
+      end
+    end)
+  end)
+
+     
+
+  RegisterNetEvent('qb-simplefarming:spicypicklesprocessing', function()
+    QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
+      if cucumber then
+        TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_processingtime'] , false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+        }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:spicypicklesprocessing")
+        end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+        end)
+      elseif not cucumber then
+          QBCore.Functions.Notify(Config.Alerts['error_cucumberslicing'], "error", 3000)
+      end
+    end)
+  end)
+
+     
+
+  RegisterNetEvent('qb-simplefarming:breadandbutterpicklesprocessing', function()
+    QBCore.Functions.TriggerCallback('qb-simplefarming:cucumbercheck', function(cucumber)
+      if cucumber then
+        TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+        QBCore.Functions.Progressbar('cucumber_processing', Config.Alerts['cucumber_processingbar'], Config.ProcessingTime['cucumber_processingtime'] , false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+        }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:breadandbutterpicklesprocessing")
+        end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+        end)
+      elseif not cucumber then
+          QBCore.Functions.Notify(Config.Alerts['error_cucumberslicing'], "error", 3000)
       end
     end)
   end)
