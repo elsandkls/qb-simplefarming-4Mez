@@ -436,7 +436,7 @@ Config.Alerts = {
 
 -- ❓ grape
     ['grape_fields'] = 'Grape Farm',
-    ['grapes_name'] = 'Grapes', 
+    ['grape_name'] = 'Grapes', 
     --
     ['grape_picking'] = 'Picking Grapes',
     ['grape_processingbar'] = 'Straining Grapes',

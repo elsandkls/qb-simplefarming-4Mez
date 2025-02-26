@@ -397,3 +397,67 @@ RegisterNetEvent('qb-simplefarming:makinggrapejuice', function()
     end
   end)
 end)
+
+RegisterNetEvent('qb-simplefarming:makingslicedgrapes', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:grapecheck', function(grapes)
+    if grapes then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('grape_processing', Config.Alerts['grape_processingbar'], Config.ProcessingTime['grape_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:slicedgrapeprocessing")
+      end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not grapes then
+      QBCore.Functions.Notify(Config.Alerts['error_grape'], "error", 3000)
+    end
+  end)
+end)
+
+RegisterNetEvent('qb-simplefarming:makinggrapejelly', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:grapejuicecheck', function(grapes)
+    if grapes then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('grape_processing', Config.Alerts['grape_processingbar'], Config.ProcessingTime['grape_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:grapejellyprocessing")
+      end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not grapes then
+      QBCore.Functions.Notify(Config.Alerts['error_grape'], "error", 3000)
+    end
+  end)
+end)
+
+
+RegisterNetEvent('qb-simplefarming:makingwhine', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:grapejuicecheck', function(grapes)
+    if grapes then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('grape_processing', Config.Alerts['grape_processingbar'], Config.ProcessingTime['grape_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:whineprocessing")
+      end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not grapes then
+      QBCore.Functions.Notify(Config.Alerts['error_grape'], "error", 3000)
+    end
+  end)
+end)
