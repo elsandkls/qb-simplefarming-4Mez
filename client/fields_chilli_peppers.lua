@@ -317,3 +317,46 @@ RegisterNetEvent('qb-simplefarming:makingchillysauce', function()
     end
   end)
 end) 
+
+RegisterNetEvent('qb-simplefarming:makingpickledpeppers', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:chillycheck', function(hotstuff)
+    if hotstuff then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('chillypepper_processing', Config.Alerts['chilly_hotsauce'], Config.ProcessingTime['chillypepper_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:makingpickledpeppers")
+      end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not hotstuff then
+      QBCore.Functions.Notify(Config.Alerts['error_chilly'], "error", 3000)
+    end
+  end)
+end) 
+
+
+RegisterNetEvent('qb-simplefarming:makingslicedpeppers', function()
+  QBCore.Functions.TriggerCallback('qb-simplefarming:chillycheck', function(hotstuff)
+    if hotstuff then
+      TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+      QBCore.Functions.Progressbar('chillypepper_processing', Config.Alerts['chilly_hotsauce'], Config.ProcessingTime['chillypepper_processingtime'] , false, true, {
+      disableMovement = true,
+      disableCarMovement = true,
+      disableMouse = false,
+      disableCombat = true,
+      }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:makingslicedpeppers")
+      end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+      end)
+    elseif not hotstuff then
+      QBCore.Functions.Notify(Config.Alerts['error_chilly'], "error", 3000)
+    end
+  end)
+end) 

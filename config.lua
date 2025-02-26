@@ -456,12 +456,14 @@ Config.Alerts = {
     ['error_greenpepperslicing'] = 'You don\'t have any greenpeppers to slice',
 
 -- ❓ chilli pepper
-    ['chillypepper_picking'] = 'Picking ChillyPeppers',
+    ['ChilliPeppers'] = 'Chilli Peppers',
+    ['chillypepper_picking'] = 'Picking Chilli Peppers',
     ['chilly_hotsauce'] = 'Making Hot Sauce',
-    ['chilly_processing'] = 'Crushed ' ..Config.ChillyProcessing.. ' chilly Peppers',
+    ['chilly_processing'] = 'Crushed ' ..Config.ChillyProcessing.. ' Chilli Peppers',
     ['chilly_processed'] = 'Made ' ..Config.ChillyProcessed.. ' hot sauce bottle\'s',
-    ['error_chilly'] = 'Hm, It seems like you don\'t have any chilly peppers to process... Come back later!',
+    ['error_chilly'] = 'Hm, It seems like you don\'t have any chilli peppers to process... Come back later!',
 
+-- ❓ tomatoes
     ['tomatoes_color'] = 'Red Tomatoes',
     ['tomatoes_picking'] = 'Picking Tomatoes',
     ['tomatoes_processingbar'] = 'Smashing Tomatoes',
