@@ -33,6 +33,26 @@ QBCore.Functions.CreateCallback('qb-simplefarming:limescheck', function(source, 
     end
 end)
 
+QBCore.Functions.CreateCallback('qb-simplefarming:limejuicecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lime'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+QBCore.Functions.CreateCallback('qb-simplefarming:limepiecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lime'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
 ------------------------------- Lime Stuff ----------------------------
 
 RegisterServerEvent('qb-simplefarming:limepicking', function()

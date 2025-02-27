@@ -143,4 +143,23 @@ if Config.UseBlips then
     end)
   end
    
- 
+  RegisterNetEvent('qb-simplefarming:makingwheatflor', function()
+    QBCore.Functions.TriggerCallback('qb-simplefarming:wheatcheck', function(wheat)
+      if wheat then
+        TriggerEvent('animations:client:EmoteCommandStart', {"Clipboard"})
+        QBCore.Functions.Progressbar('wheat_processing', Config.Alerts['wheat_processingbar'], Config.ProcessingTime['wheat_processingtime'] , false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+        }, {}, {}, {}, function()
+          TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+          TriggerServerEvent("qb-simplefarming:wheatprocessing")
+        end, function()
+        QBCore.Functions.Notify(Config.Alerts['cancel'], "error")
+        end)
+      elseif not wheat then
+          QBCore.Functions.Notify(Config.Alerts['error_wheatgrinding'], "error", 3000)
+      end
+    end)
+  end)

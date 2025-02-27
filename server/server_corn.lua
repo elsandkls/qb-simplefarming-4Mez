@@ -27,6 +27,15 @@ QBCore.Functions.CreateCallback('qb-simplefarming:corncheck', function(source, c
             cb(false)
         end
     end
+end)QBCore.Functions.CreateCallback('qb-simplefarming:canofcorn', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName("corncob") ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
 end)
 
 RegisterServerEvent('qb-simplefarming:cornpicking', function()

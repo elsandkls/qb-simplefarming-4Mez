@@ -22,7 +22,7 @@ QBCore.Functions.CreateUseableItem(Config.Inventory['PeachPieSlice'].db_obj, fun
 end)
 
 
-QBCore.Functions.CreateCallback('qb-simplefarming:peachscheck', function(source, cb)
+QBCore.Functions.CreateCallback('qb-simplefarming:peachcheck', function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then
         if Player.Functions.GetItemByName(Config.Inventory['Peach'].db_obj) ~= nil then

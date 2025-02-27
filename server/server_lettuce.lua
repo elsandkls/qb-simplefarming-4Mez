@@ -131,6 +131,39 @@ QBCore.Functions.CreateCallback('qb-simplefarming:lettucecheck', function(source
     end
 end)
 
+QBCore.Functions.CreateCallback('qb-simplefarming:bowloflettucecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lettuce'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+
+QBCore.Functions.CreateCallback('qb-simplefarming:housesaladcheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lettuce'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+
+QBCore.Functions.CreateCallback('qb-simplefarming:greeksaladcheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lettuce'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+
 -- TODO 
 
 -- ❓ lettuce - language config.lua

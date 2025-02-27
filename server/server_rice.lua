@@ -6,13 +6,33 @@ QBCore.Functions.CreateUseableItem(Config.Inventory['Rice'].db_obj, function(sou
     end
 end)
 
-QBCore.Functions.CreateUseableItem(Config.Inventory['Rice'].db_obj, function(source, item)
+QBCore.Functions.CreateUseableItem(Config.Inventory['RiceFlour'].db_obj, function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 	  if Player.Functions.RemoveItem(item.name, 1, item.slot) then
         TriggerClientEvent("consumables:client:Eat", source, item.name)
     end
 end)
 
+QBCore.Functions.CreateCallback('qb-simplefarming:ricecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Rice'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+QBCore.Functions.CreateCallback('qb-simplefarming:riceflourcheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Rice'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
 -- Rice
 RegisterServerEvent('qb-simplefarming:ricepicking', function()
     local Player = QBCore.Functions.GetPlayer(source)
@@ -83,17 +103,7 @@ RegisterServerEvent('qb-simplefarming:riceballsprocessing', function()
     TriggerClientEvent('QBCore:Notify', source, Config.Alerts['riceball_processed'])
 end)
 
-
-QBCore.Functions.CreateCallback('qb-simplefarming:ricecheck', function(source, cb)
-    local Player = QBCore.Functions.GetPlayer(source)
-    if Player ~= nil then
-        if Player.Functions.GetItemByName(Config.Inventory['Rice'].db_obj) ~= nil then
-            cb(true)
-        else
-            cb(false)
-        end
-    end
-end)
+ 
  
 --[[
 -- ❓ rice

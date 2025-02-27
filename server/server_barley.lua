@@ -24,7 +24,16 @@ QBCore.Functions.CreateCallback('qb-simplefarming:barleycheck', function(source,
         end
     end
 end)
-
+QBCore.Functions.CreateCallback('qb-simplefarming:barleyflourcheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Barley'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
 RegisterServerEvent('qb-simplefarming:barleypicking', function()
     local source = source
     local Player = QBCore.Functions.GetPlayer(tonumber(source))

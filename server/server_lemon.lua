@@ -33,6 +33,28 @@ QBCore.Functions.CreateCallback('qb-simplefarming:lemonscheck', function(source,
     end
 end)
 
+QBCore.Functions.CreateCallback('qb-simplefarming:lemonjuicecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lemon'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
+
+
+QBCore.Functions.CreateCallback('qb-simplefarming:lemonpieslicecheck', function(source, cb)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player ~= nil then
+        if Player.Functions.GetItemByName(Config.Inventory['Lemon'].db_obj) ~= nil then
+            cb(true)
+        else
+            cb(false)
+        end
+    end
+end)
 ------------------------------- Lemon Stuff ----------------------------
 
 RegisterServerEvent('qb-simplefarming:lemonpicking', function()
