@@ -699,6 +699,9 @@ Config.Inventory={}
     Config.Inventory['Barley'] = {}
         Config.Inventory['Barley'].db_obj = "Barley"
         Config.Inventory['Barley'].in_game_obj = "Barley"   
+    Config.Inventory['BarleyFlour'] = {}
+        Config.Inventory['BarleyFlour'].db_obj = "BarleyFlour"
+        Config.Inventory['BarleyFlour'].in_game_obj = "BarleyFlour"  
 
 -- ❓ wheat
     Config.Inventory['Wheat'] = {}
@@ -729,6 +732,9 @@ Config.Inventory={}
     Config.Inventory['Limes'] = {}
         Config.Inventory['Limes'].db_obj = "Limes"
         Config.Inventory['Limes'].in_game_obj = "Limes"   
+    Config.Inventory['LimesHarvest'] = {}
+        Config.Inventory['LimesHarvest'].db_obj = "LimesHarvest"
+        Config.Inventory['LimesHarvest'].in_game_obj = "LimesHarvest"  
 
 -- ❓ peaches
     Config.Inventory['Peach'] = {}
@@ -748,11 +754,17 @@ Config.Inventory={}
     Config.Inventory['Avacado'] = {}
         Config.Inventory['Avacado'].db_obj = "Avacado"
         Config.Inventory['Avacado'].in_game_obj = "Avacado"   
+    Config.Inventory['AvacadoHarvest'] = {}
+        Config.Inventory['AvacadoHarvest'].db_obj = "AvacadoHarvest"
+        Config.Inventory['AvacadoHarvest'].in_game_obj = "AvacadoHarvest"  
 
 -- ❓ pecans
     Config.Inventory['Pecan'] = {}
         Config.Inventory['Pecan'].db_obj = "Pecan"
         Config.Inventory['Pecan'].in_game_obj = "Pecan"  
+    Config.Inventory['PecanHarvest'] = {}
+        Config.Inventory['PecanHarvest'].db_obj = "PecanHarvest"
+        Config.Inventory['PecanHarvest'].in_game_obj = "PecanHarvest"  
 
 -- ❓ pumpkin
     Config.Inventory['Pumpkin'] = {}

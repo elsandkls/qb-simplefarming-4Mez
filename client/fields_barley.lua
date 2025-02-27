@@ -13,12 +13,7 @@ BarleyFieldZone = {
         distance = 5,
     },
 }
-
-
--- ❓ barley 
--- TODO
--- ✅ add new data field for lettuce trees
--- ❓ find coords (zones, and blips), and adjust sizes as needed
+ 
 BarleyFields = {
     [1] = {
         label = "Barley Field",
